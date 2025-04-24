@@ -2,10 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// This handles a GET request to the homepage (/)
-app.get('/', (req, res) => {
-  res.send('Welcome to MFL Resource Hub!');
-});
+// Serve static files from the "public" folder
+app.use(express.static('public'));
 
 // Start the server
 app.listen(port, () => {

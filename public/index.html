@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MFL Resource Hub</title>
+        
+        <!-- Page Font Link -->
+        <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <!-- Link to .css file -->
+        <link rel="stylesheet" href="index.css">  <!-- Home Page stylesheet -->
+    </head>
+
+    <body>
+
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <h2>Welcome to the MFL Resource Hub!</h2>
+              <p>Thanks for visiting the MFL Resource Hub. This website is still undergoing development so please note not all areas of the website are currently available.</p>
+              <p>Please check back soon as new pages and resources are regularly being added!</p>
+              <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+
+        <!-- Header  -->
+        <header>
+    
+            <!-- Home Button -->
+            <a href="index.html" class="home-button">
+                <img src="images/homepage.jpg" alt="Home" class="homepage-button">
+            </a>
+            
+            <!-- Page Heading / Links Bar -->
+            <h1>MFL Resource Hub</h1>
+            <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            
+            <!-- Login/Sign Up Buttons -->
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+            
+            <!-- Languages Dropdown -->
+            <li class="dropdown">
+                <a href="languages.html" class="dropbtn">Languages</a>
+                <ul class="dropdown-menu">
+                    <li><a href="french.html">French</a></li>
+                    <li><a href="german.html">German</a></li>
+                    <li><a href="spanish.html">Spanish</a></li>
+                </ul>
+            </li>
+    
+            <!-- Skills Hub Dropdown -->
+            <li class="dropdown">
+                <a href="skills-hub.html" class="dropbtn">Skills Hub</a>
+                <ul class="dropdown-menu">
+                    <li><a href="reading.html">Reading</a></li>
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="listening.html">Listening</a></li>
+                    <li><a href="speaking.html">Speaking</a></li>
+                </ul>
+            </li>
+
+            <!-- Levels Dropdown -->
+            <li class="dropdown">
+                <a href="curriculum.html" class="dropbtn">Curriculum</a>
+                <ul class="dropdown-menu">
+                    <li><a href="cfe-level.html">CfE Level 2-3</a></li>
+                    <li><a href="national4.html">National 4</a></li>
+                    <li><a href="national5.html">National 5</a></li>
+                    <li><a href="higher.html">Higher</a></li>
+                    <li><a href="advanced-higher.html">Advanced Higher</a></li>
+                </ul>
+            </li>
+            
+            <!-- Topics Dropdown -->
+            <li class="dropdown">
+                <a href="topics.html" class="dropbtn">Topics</a>
+                <ul class="dropdown-menu">
+                    <li><a href="society.html">Society</a></li>
+                    <li><a href="learning.html">Learning</a></li>
+                    <li><a href="employability.html">Employability</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="clil.html">CLIL</a></li>
+            <li><a href="blog.html">Blog Posts</a></li>
+            <li><a href="forum.html">Teachers' Forum</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="useful-links.html">Useful Links</a></li>
+            <li><a href="get-in-touch.html">Get in Touch</a></li>
+        </ul>
+            </nav>
+            
+        </header>
+
+        <!-- Section 1: Welcome Message -->
+        <section class="section1">
+
+            <div class="welcome-message">
+
+                <h2>Welcome to the MFL Resource Hub</h2>
+                <p>Bonjour ! Hallo! &iexcl;Hola!</p>
+                <p style="margin-bottom: 15px;">Welcome to the MFL Resource Hub, your dedicated hub for <b>free MFL resources</b>.</p>
+                <p>Across the UK, and globally, there is exceptional work happening in MFL classrooms. Key to this, is the exchanging of ideas and resources so that we can inspire each other and elevate the learning experience for all. This platform offers a diverse collection of free materials - covering a variety of levels, topics and skills - all designed to enrich your classroom.</p>
+                <p style="margin-bottom: 15px;">Join us in fostering a culture of collaboration and continuous improvement, and help shape the future of language education. Happy Exploring!</p>            
+            </div>
+
+        </section>
+
+        <!-- Section 2: Explore Resources by Language: -->
+        <section class="section2">
+            <h2>Explore Resources by Language:</h2>
+            <p>Find resources specific to your language of choice - French, German or Spanish.</p>
+            <div class="columns">
+                <a href="french.html" class="column">
+                    <div class="column-content">
+                        <img src="images/french.jpg" alt="French" class="column-image">
+                        <h3>French</h3>
+                    </div>
+                </a>
+                <a href="german.html" class="column">
+                    <div class="column-content">
+                        <img src="images/german.jpg" alt="German" class="column-image">
+                        <h3>German</h3>
+                    </div>
+                </a>
+                <a href="spanish.html" class="column">
+                    <div class="column-content">
+                        <img src="images/spanish.jpg" alt="Spanish" class="column-image">
+                        <h3>Spanish</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 3: Explore Resources by Skill: -->
+    <section class="section3">
+        <h2>Explore Resources by Skill:</h2>
+        <p>Looking to sharpen specific language skills?<br>Find targeted resources for reading, writing, listening, and speaking &ndash; all designed to support learners at every level.</p>
+        <p>Click below to discover engaging materials that bring language learning to life!</p>
+        <div class="columns">
+            <a href="reading.html" class="column">
+                <div class="column-content">
+                    <img src="images/reading.jpg" alt="Reading" class="column-image">
+                    <h3>Reading</h3>
+                </div>
+            </a>
+            <a href="writing.html" class="column">
+                <div class="column-content">
+                    <img src="images/writing.jpg" alt="Writing" class="column-image">
+                    <h3>Writing</h3>
+                </div>
+            </a>
+        </div>
+        <div class="columns">
+            <a href="listening.html" class="column">
+                <div class="column-content">
+                    <img src="images/listening.jpg" alt="Listening" class="column-image">
+                    <h3>Listening</h3>
+                </div>
+            </a>
+            <a href="speaking.html" class="column">
+                <div class="column-content">
+                    <img src="images/speaking.jpg" alt="Speaking" class="column-image">
+                    <h3>Speaking</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 4: Explore Resources by Level -->
+    <section class="section4">
+        <h2>Explore Resources by Level:</h2>
+        <p>Looking for resources fit for purpose?<br>Our resources have been organised per level based on the Curriculum for Excellence (CfE) and SQA Examinations.</p>
+        <div class="columns">
+            <!-- Row 1: Two Columns -->
+            <a href="advanced-higher.html" class="column">
+                <div class="column-content">
+                    <h3>Advanced Higher</h3>
+                </div>
+            </a>
+
+            <a href="higher.html" class="column">
+                <div class="column-content">
+                    <h3>Higher</h3>
+                </div>
+            </a>
+
+            <!-- Row 2: Three Columns -->
+            <a href="national5.html" class="column">
+                <div class="column-content">
+                    <h3>National 5</h3>
+                </div>
+            </a>
+
+            <a href="national4.html" class="column">
+                <div class="column-content">
+                    <h3>National 4</h3>
+                </div>
+            </a>
+
+            <a href="cfe-level.html" class="column">
+                <div class="column-content">
+                    <h3>CfE Level 2-3</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 5: Explore Resources by Topic: -->
+    <section class="section5">
+        <h2>Explore Resources by Topic:</h2>
+        <p>Browse resources by topic to make finding the right resource just a few clicks away!</p>
+        <div class="columns">
+            <!-- First row with two columns -->
+            <a href="society.html" class="column">
+                <div class="column-content">
+                    <img src="images/society.jpg" alt="society" class="column-image">
+                    <h3>Society</h3>
+                </div>
+            </a>
+            <a href="Learning.html" class="column">
+                <div class="column-content">
+                    <img src="images/Learning.jpg" alt="Learning" class="column-image">
+                    <h3>Learning</h3>
+                </div>
+            </a>
+        </div>
+        <div class="columns">
+            <!-- Second row with two columns -->
+            <a href="Employability.html" class="column">
+                <div class="column-content">
+                    <img src="images/Employability.jpg" alt="Employability" class="column-image">
+                    <h3>Employability</h3>
+                </div>
+            </a>
+            <a href="Culture.html" class="column">
+                <div class="column-content">
+                    <img src="images/Culture.jpg" alt="Culture" class="column-image">
+                    <h3>Culture</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 6: CLIL: -->
+    <section class="section-generic">
+        <div class="clil">
+            <h2>Discover CLIL!</h2>
+            <p>Content and Language Integrated Learning (CLIL) is an educational approach that combines language learning with subject-specific content. Instead of teaching a language as a separate subject, CLIL integrates it into lessons within other curricular areas such as social subjects and sciences, allowing students to develop both their language skills and subject knowledge simultaneously. This immersive method helps learners acquire language skills naturally while engaging with meaningful content. CLIL encourages active learning, critical thinking, and communication skills, making it an effective way to enhance both subject knowledge and linguistic competence.</p>
+            <p>Find out more about how to implement CLIL in your classroom and browse our range of CLIL resources.
+                <br><br>
+                <a href="clil.html" class="clil-link">
+                    <button class="clil-learn-more-button">Learn more&#8230;</button>
+                </a>
+            </div>  
+    </section>
+
+    <!-- Section 7: Forum: -->
+    <section class="section-generic">
+        <div class="forum">
+            <h2>Teachers' Forum</h2>
+            <p>[insert text here]</p>
+        </div>
+    </section>
+
+    <!-- Section 8: Upcoming Events: -->
+    <section class="section-generic">
+        <div class="events">
+            <h2>Upcoming Events</h2>
+            <p>[insert text here]</p>
+        </div>
+    </section>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+          We use cookies to improve your experience. By clicking "Accept All", you agree to our use of cookies.
+          <a href="legal/privacy.html" target="_blank">Learn more</a>
+        </p>
+        <div class="cookie-buttons">
+          <button id="accept-cookies">Accept All</button>
+          <button id="reject-cookies">Reject</button>
+        </div>
+      </div>
+
+    <script src="js/homepage-popup.js"></script>
+    <script src="cookie-banner.js"></script>
+
+</body>
+
+<footer>
+    <section class="footer">
+    <div class="footer">
+        <p>DISCLAIMER: All images on this page are authored by Freepik. Downloaded from <a href="https://www.flaticon.com/authors/freepik" title="freepik-main-page">Icons created by Freepik - Flaticon</a></p>
+        <p>This website is developed and managed by Heather McKirdy.</p>
+        <p>&copy; 2025 MFL Resource Hub. All Rights Reserved.</p>
+            <a href="get-in-touch.html" class="my-button-link">
+                <button class="my-button">Get in Touch</button>
+            </a>
+    </div>
+    </section>
+</footer>
+
+</html>

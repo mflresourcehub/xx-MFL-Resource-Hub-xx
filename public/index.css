@@ -1,0 +1,703 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding-top: 5vh; /* pushes it slightly down from the top */
+}
+  
+.popup-content {
+    background: #f3e98d;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 3px solid black; /* Black border added */
+    align-items: center;
+}
+
+.popup-content h2 {
+    font-size: 1.5em;
+    font-family: 'Winky Sans', sans-serif;
+    color: rgb(12, 7, 7); /* White text color */
+    text-align: left;
+}
+
+.popup-content p {
+    font-size: 1.2em;
+    font-family: 'Winky Sans', sans-serif;
+    color: rgb(12, 7, 7); /* White text color */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f586ca; /* green background */
+    color: rgb(0, 0, 0);
+    border: 2px solid black; /* Black border added */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Winky Sans', sans-serif;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 155px;
+  }
+  
+  button:hover {
+    background-color: #80f5e1; /* darker green on hover */
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background-color: #3e8e41; /* even darker when clicked */
+    transform: scale(0.98);
+  }
+
+.home-button {
+    position: absolute; /* Position the button relative to the header */
+    top: 40px; /* Adjust the button's distance from the top */
+    left: 40px; /* Adjust the button's distance from the left edge */
+    z-index: 1000; /* Ensure the button is on top of other content */
+}
+
+.homepage-button {
+    width: 60px; /* Set the size to be smaller */
+    height: 60px; /* Maintain the aspect ratio */
+}
+
+.auth-buttons {
+    position: absolute;
+    right: 3rem;
+    top: 2.6rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #f5ed7d;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.login-btn:hover {
+    background-color: #ffffff;
+    color: rgb(243, 31, 208);
+}
+
+.signup-btn {
+    background-color: #f5ed7d;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.signup-btn:hover {
+    background-color: #ffffff;
+    color: rgb(243, 31, 208);
+}
+
+header .banner h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+header .banner p {
+    font-size: 18px;
+}
+
+/* Header Styling - Font and Background Colour */
+header {
+    background-color: #f5e2e2;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: 'Winky Sans', sans-serif;
+    color: rgb(12, 7, 7); /* White text color */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Winky Sans', sans-serif;
+    font-size:medium
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(24, 14, 14);
+    font-weight: bold;
+}
+
+nav {
+    text-align: center; /* Center-align the navigation */
+    padding: 10px 0; /* Add some padding above and below */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex; /* Makes the menu items display in a single row */
+    justify-content: center; /* Center align the items */
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px; /* Add spacing between menu items */
+}
+
+nav ul li a {
+    display: block;
+    color: black; /* Ensures text remains visible */
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255); /* White background for dropdown */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for dropdown */
+    border-radius: 5px;
+    border: 2px solid black; /* Black border added */
+    z-index: 9999; /* Ensures the dropdown is on top of other content */
+}
+
+.dropdown-menu li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black; /* Line between each option */
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hover Effects */
+nav ul li a:hover, .dropdown-menu li a:hover {
+    color: #e9259e; /* Changes text color on hover */
+}
+
+/* FYI - maintain this to make sure no margins round the outside of the webpage */
+body {
+    margin: 0;
+    padding: 0; /* optional: to also remove padding */
+    background-color: #f5e2e2;
+}
+
+/* FYI - use this to change section background colour and section border line */
+.section1 {
+    padding: 50px;
+    background-color: #f3f2ad;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 0.1%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.section1 h2 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-left: 1%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.section1 p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: left;
+    margin-left: 1%;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Alignment (Heading & Content) */
+.welcome-message {
+    margin-left: 1%;
+    margin-right: 5%;
+}
+
+/* In-Text Web Link Formatting */
+.section1 a {
+    color: rgb(255, 0, 0); /* Change link color */
+    text-decoration: underline; /* Remove underline */
+}
+
+.section1 a:hover {
+    color: rgb(98, 13, 235); /* Change link color */
+    text-decoration: underline; /* Underline link on hover */
+}
+
+/* FYI - use this to change section background colour and section border line */
+.section2 {
+    padding: 50px;
+    background-color: #f87ae3;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.section2 h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.section2 p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+.columns {
+    margin-left: 1.5%;
+    margin-right: 5%;
+}
+
+/* Columns Layout */
+.columns {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap onto the next line */
+    justify-content: center; /* Center-align the columns */
+    gap: 20px; /* Add space between columns */
+    max-width: 1200px; /* Limit max width to keep it from stretching too wide */
+    margin: 0 auto; /* Center the columns container on the page */
+}
+
+/* Each Column Styling */
+.column {
+    text-decoration: none; /* Remove underline on links */
+    width: 30%; /* Adjust to 30% width for three columns in a row */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Column Content Styling */
+.column-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    margin-bottom: 30px; /* Add space below the paragraph */
+    font-family: 'Winky Sans', sans-serif;
+    font-size: 1em;
+}
+
+/* Column Image */
+.column-image {
+    width: 80%; /* Make the image fit well inside the column */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin-top: 20px;           /* Add margin above the image */
+}
+
+/* Hover Effect for Columns */
+.column:hover .column-content {
+    transform: translateY(-5px); /* Move the column up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Add more shadow when hovered */
+}
+
+/* Column Title */
+.column h3 {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.column-image {
+    width: 100px;  /* Adjust the width to 50px */
+    height: 100px; /* Adjust the height to 50px */
+    margin-top: 20px;           /* Add margin above the image */
+    object-fit: cover; /* Optional: Ensures the image fills the box while maintaining aspect ratio */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .column {
+        width: 48%; /* Two columns per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        width: 100%; /* One column per row on very small screens */
+    }
+}
+
+/* FYI - use this to change section background colour and section border line */
+.section3 {
+    padding: 50px;
+    background-color: #61dff0;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.section3 h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.section3 p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* FYI - use this to change section background colour and section border line */
+.section4 {
+    padding: 50px;
+    background-color: #c1eca4;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.section4 h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.section4 p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* FYI - use this to change section background colour and section border line */
+.section5 {
+    padding: 50px;
+    background-color: #f0cc69;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.section5 h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.section5 p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* FYI - use this to change section background colour and section border line */
+.clil {
+    padding: 50px;
+    background-color: #f3f2ad;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.clil h2 {
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.clil p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: left;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+.clil-learn-more-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Winky Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.clil-learn-more-button:hover {
+    background-color: #a5e978;
+}
+
+/* FYI - use this to change section background colour and section border line */
+.forum {
+    padding: 50px;
+    background-color: #f87ae3;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.forum h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.forum p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* FYI - use this to change section background colour and section border line */
+.events {
+    padding: 50px;
+    background-color: #61dff0;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1700px;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1.5%;
+    margin: 1.5% auto; /* Top & bottom 1.5%, left & right auto for centering */
+}
+
+/* Section Heading */
+.events h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Section Content */
+.events p {
+    font-size: 1.2em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1.5%;
+    margin-bottom: 30px; /* Add space below the heading */
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    font-family: 'Winky Sans', sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;  /* Aligns text to the left, buttons to the right */
+    align-items: center;
+    z-index: 1000;
+    border: 2px solid black;              /* Remove the border */
+  }
+  
+  .cookie-banner p {
+    margin: 0;
+  }
+  
+  .cookie-buttons {
+    display: flex;
+    gap: 5px; /* Adjust the gap between buttons */
+  }
+  
+  .cookie-buttons button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #accept-cookies {
+    background-color: #99fc9c;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;              /* Remove the border */
+    font-size: 14px;
+  }
+  
+  #reject-cookies {
+    background-color: #f08078;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;              /* Remove the border */
+    font-size: 14px;
+  }
+
+/* FYI - use this to change section background colour and section border line */
+.footer {
+    background-color: #f5e2e2;
+    font-size: 1.1em; /* Apply this font-size */
+    text-align: center;
+    align-items: center;
+    font-family: 'Winky Sans', sans-serif;
+}
+
+/* Basic Button Styling */
+.my-button {
+    background-color: rgb(243, 148, 243); /* Green background color */
+    color: rgb(7, 4, 7);              /* White text color */
+    padding: 10px 15px;        /* Vertical and horizontal padding */
+    font-size: 1em; /* Apply this font-size */
+    font-family: 'Winky Sans', sans-serif; /* Change the font here */
+    border: 2px solid black;              /* Remove the border */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    text-align: center;        /* Center-align text */
+    text-decoration: none;     /* Remove text decoration */
+    margin-bottom: 30px;
+    margin-right: 150px;
+}
+
+/* Button Hover Effect */
+.my-button:hover {
+    background-color: #f1f3f1; /* Slightly darker green on hover */
+}
+
+/* Link Styling */
+.my-button-link {
+    text-decoration: none; /* Remove underline from link */
+}
