@@ -41,7 +41,19 @@
             <!-- Login/Sign Up Buttons -->
             <div class="auth-buttons">
                 <a href="login.html" class="btn login-btn">Login</a>
-                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                <button id="signup-btn" class="btn signup-btn">Sign Up</button>
+            </div>
+
+            <!-- Hidden Sign-Up Form -->
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <form action="/signup" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
             </div>
             
             <!-- Languages Dropdown -->
@@ -290,7 +302,8 @@
       </div>
 
     <script src="js/homepage-popup.js"></script>
-    <script src="cookie-banner.js"></script>
+    <script src="js/cookie-banner.js"></script>
+    <script src="js/signup.js"></script>
 
 </body>
 
