@@ -1,8 +1,10 @@
 // Import necessary modules
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+const User = require('./models/User');  // Import the User model
 const app = express();
-const PORT = 3000; // You can change this to any port you prefer
+const PORT = 3000;  // You can change this to any port you prefer
 
 // Middleware to parse incoming request bodies (for form data)
 app.use(express.urlencoded({ extended: true }));
@@ -10,6 +12,14 @@ app.use(express.json());
 
 // Serve static files (e.g., HTML, CSS, JS) from the "public" folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// MongoDB connection string (replace with your actual credentials)
+const dbURI = 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/mflResourceHub?retryWrites=true&w=majority';
+
+// Connect to MongoDB using Mongoose
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((error) => console.log('Error connecting to MongoDB:', error));
 
 // Define routes
 app.get('/', (req, res) => {
@@ -21,14 +31,29 @@ app.get('/signup', (req, res) => {
 });
 
 // Add a POST route to handle form submission (when user clicks sign up)
-app.post('/signup', (req, res) => {
+app.post('/signup', async (req, res) => {
     const { username, password } = req.body;
-    
-    // Here, we can process the user data, like saving it to a database (this part is skipped for now)
-    console.log(`Received sign-up data: ${username}, ${password}`);
 
-    // For now, send a success message
-    res.send('Sign-up successful!');  // You can replace this with a redirect or a success message
+    // Check if the username already exists in the database
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+        return res.status(400).send('Username is already taken');
+    }
+
+    // Create a new user instance
+    const newUser = new User({
+        username,
+        password,  // For now, we store the password directly. You should hash it later.
+    });
+
+    try {
+        // Save the new user to the database
+        await newUser.save();
+        res.send('Sign-up successful! You can now log in.');  // Redirect or message
+    } catch (error) {
+        console.error('Error saving user:', error);
+        res.status(500).send('There was an error signing up. Please try again later.');
+    }
 });
 
 // Start the server
