@@ -1,3 +1,27 @@
+button {
+    padding: 10px 20px;
+    background-color: #f586ca; /* green background */
+    color: rgb(0, 0, 0);
+    border: 2px solid black; /* Black border added */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Winky Sans', sans-serif;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 155px;
+  }
+  
+  button:hover {
+    background-color: #80f5e1; /* darker green on hover */
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background-color: #3e8e41; /* even darker when clicked */
+    transform: scale(0.98);
+  }
+
 .home-button {
     position: absolute; /* Position the button relative to the header */
     top: 40px; /* Adjust the button's distance from the top */
@@ -168,12 +192,12 @@ body {
 /* FYI - use this to change section background colour and section border line */
 .section1 {
     padding: 50px;
-    background-color: #def3ad;
+    background-color: #ffffff;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1700px;
-    margin-top: 0.1%;
+    margin-top: 10px;
     margin-left: 4%;
     margin-right: 4%;
     margin-bottom: 1.5%;
@@ -181,19 +205,39 @@ body {
 }
 
 /* Section Heading */
-.section1 h2 {
+.title-text h1 {
+    text-align: center;
+    font-size: 1.6em;
+    margin-top: 10px;
+    margin-left: 1%;
+    color: #000000;
+    font-family: 'Winky Sans', sans-serif;
+    text-decoration: underline;
+}
+
+.body-text h2 {
     text-align: left;
-    font-size: 1.5em;
-    margin-top: 20px;
+    font-size: 1.4em;
+    margin-top: 35px;
     margin-left: 1%;
     margin-bottom: 20px; /* Add space below the heading */
     color: #000000;
     font-family: 'Winky Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bold; /* 👈 Add this line */
+}
+
+.title-text p {
+    font-size: 1em; /* Apply this font-size */
+    text-align: center;
+    margin-left: 1%;
+    margin-bottom: 20px;
+    font-family: 'Winky Sans', sans-serif;
 }
 
 /* Section Content */
-.section1 p {
-    font-size: 1.2em; /* Apply this font-size */
+.body-text p {
+    font-size: 1.1em; /* Apply this font-size */
     text-align: left;
     margin-left: 1%;
     font-family: 'Winky Sans', sans-serif;
@@ -203,134 +247,6 @@ body {
 .welcome-message {
     margin-left: 1%;
     margin-right: 5%;
-}
-
-label {
-    text-align: left;
-    font-size: 1.2em;
-    margin-top: 20px;
-    margin-left: 1%;
-    margin-bottom: 20px; /* Add space below the label */
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-}
-
-select {
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1.1em;
-    border: 2px solid black;
-}
-
-/* Styling for the consent checkboxes */
-.consent-checkbox {
-    display: flex;
-    align-items: left;
-    margin-left: 0;
-}
-
-.consent-checkbox input[type="checkbox"] {
-    width: 20px; /* Increases size of the checkbox */
-    height: 20px; /* Increases size of the checkbox */
-    margin-right: 10px; /* Adds space between checkbox and label */
-    border: 2px solid black;
-}
-
-/* Style for the default select option */
-option[value="select"] {
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1em;
-    font-style: italic;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-/* Style for the default select option */
-option[value="teacher"] {
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1em;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-/* Style for the default select option */
-option[value="pupil"] {
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1em;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-/* Style for the .user-form div */
-.user-form {
-    background-color: #ffffff; /* Light background color */
-    padding: 20px;             /* Space inside the form */
-    border-radius: 10px;       /* Rounded corners */
-    border: 2px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%;               /* Full width, or set a max width */
-    max-width: 1000px;          /* Limit the width */
-    margin-top: 30px;
-    margin-left: 10px;
-}
-
-/* Style for form elements inside .user-form (input, textarea, etc.) */
-.user-form input,
-.user-form select,
-.user-form textarea {
-    width: 90%;               /* Make the inputs take up full width */
-    padding: 10px;             /* Padding for the inputs */
-    margin-bottom: 15px;       /* Space below each input */
-    border: 2px solid #000000;   /* Border style */
-    border-radius: 5px;       /* Rounded corners */
-    font-size: 16px;           /* Font size for the form elements */
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1em;
-}
-
-/* Style for form labels inside .user-form */
-.user-form label {
-    display: block;            /* Display labels as block elements */
-    margin-bottom: 5px;        /* Space between label and input */
-    font-weight: normal;         /* Make labels bold */
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1em;
-}
-
-/* Style for buttons inside .user-form */
-.user-form button {
-    background-color: #fab4d5; /* Blue background for the button */
-    color: rgb(0, 0, 0);               /* White text */
-    padding: 10px 20px;         /* Padding around the text */
-    border: none;               /* Remove border */
-    border-radius: 5px;         /* Rounded corners */
-    border: 2px solid black;
-    cursor: pointer;            /* Pointer cursor on hover */
-    font-size: 16px;             /* Font size */
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1em;
-    margin-top: 20px;
-    margin-left: 45.5%;
-}
-
-/* Button hover effect */
-.user-form button:hover {
-    background-color: #4a8bc2; /* Darken the button on hover */
-}
-
-/* Style for the h3 title in the form */
-.user-form h3 {
-    color: #000000;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    margin-top: auto;
-    text-align: center;
 }
 
 /* In-Text Web Link Formatting */
@@ -343,54 +259,6 @@ option[value="pupil"] {
     color: rgb(98, 13, 235); /* Change link color */
     text-decoration: underline; /* Underline link on hover */
 }
-
-/* Cookie Banner */
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 15px;
-    font-family: 'Winky Sans', sans-serif;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;  /* Aligns text to the left, buttons to the right */
-    align-items: center;
-    z-index: 1000;
-    border: 2px solid black;              /* Remove the border */
-  }
-  
-  .cookie-banner p {
-    margin: 0;
-  }
-  
-  .cookie-buttons {
-    display: flex;
-    gap: 5px; /* Adjust the gap between buttons */
-  }
-  
-  .cookie-buttons button {
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  #accept-cookies {
-    background-color: #99fc9c;
-    color: rgb(0, 0, 0);
-    border: 2px solid black;              /* Remove the border */
-    font-size: 14px;
-  }
-  
-  #reject-cookies {
-    background-color: #f08078;
-    color: rgb(0, 0, 0);
-    border: 2px solid black;              /* Remove the border */
-    font-size: 14px;
-  }
 
 /* FYI - use this to change section background colour and section border line */
 .footer {
