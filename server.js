@@ -14,10 +14,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection string (replace with your actual credentials)
-const dbURI = 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/mflResourceHub?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://mflresourcehub:mflresourcehubpw@mfl-resource-hub.lm52rpr.mongodb.net/mflResourceHub?retryWrites=true&w=majority';
 
 // Connect to MongoDB using Mongoose
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbURI)
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.log('Error connecting to MongoDB:', error));
 
@@ -49,11 +49,15 @@ app.post('/signup', async (req, res) => {
     try {
         // Save the new user to the database
         await newUser.save();
-        res.send('Sign-up successful! You can now log in.');  // Redirect or message
+        res.redirect('/success');  // Redirect to success page
     } catch (error) {
         console.error('Error saving user:', error);
         res.status(500).send('There was an error signing up. Please try again later.');
     }
+});
+
+app.get('/success', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'success.html'));
 });
 
 // Start the server
