@@ -32,7 +32,7 @@ app.get('/signup', (req, res) => {
 
 // Add a POST route to handle form submission (when user clicks sign up)
 app.post('/signup', async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, userRole } = req.body;
 
     // Check if the username already exists in the database
     const existingUser = await User.findOne({ username });
@@ -40,10 +40,11 @@ app.post('/signup', async (req, res) => {
         return res.status(400).send('Username is already taken');
     }
 
-    // Create a new user instance
+    // Create a new user instance based on the selected role
     const newUser = new User({
         username,
         password,  // For now, we store the password directly. You should hash it later.
+        role: userRole // Store the user role (teacher or pupil)
     });
 
     try {

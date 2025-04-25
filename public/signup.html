@@ -10,12 +10,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
         <!-- Link to .css file -->
-        <link rel="stylesheet" href="index.css">  <!-- Home Page stylesheet -->
+        <link rel="stylesheet" href="signup.css">  <!-- Home Page stylesheet -->
     </head>
 
     <body>
 
-        <!-- Header  -->
+        <!-- Header -->
         <header>
     
             <!-- Home Button -->
@@ -26,68 +26,67 @@
             <!-- Page Heading / Links Bar -->
             <h1>MFL Resource Hub</h1>
             <nav>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            
-            <!-- Login/Sign Up Buttons -->
-            <div class="auth-buttons">
-                <a href="login.html" class="btn login-btn">Login</a>
-                <a href="signup.html" class="btn signup-btn">Sign Up</a>
-            </div>
-            
-            <!-- Languages Dropdown -->
-            <li class="dropdown">
-                <a href="languages.html" class="dropbtn">Languages</a>
-                <ul class="dropdown-menu">
-                    <li><a href="french.html">French</a></li>
-                    <li><a href="german.html">German</a></li>
-                    <li><a href="spanish.html">Spanish</a></li>
-                </ul>
-            </li>
-    
-            <!-- Skills Hub Dropdown -->
-            <li class="dropdown">
-                <a href="skills-hub.html" class="dropbtn">Skills Hub</a>
-                <ul class="dropdown-menu">
-                    <li><a href="reading.html">Reading</a></li>
-                    <li><a href="writing.html">Writing</a></li>
-                    <li><a href="listening.html">Listening</a></li>
-                    <li><a href="speaking.html">Speaking</a></li>
-                </ul>
-            </li>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    
+                    <!-- Login/Sign Up Buttons -->
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn login-btn">Login</a>
+                        <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                    </div>
+                    
+                    <!-- Languages Dropdown -->
+                    <li class="dropdown">
+                        <a href="languages.html" class="dropbtn">Languages</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="french.html">French</a></li>
+                            <li><a href="german.html">German</a></li>
+                            <li><a href="spanish.html">Spanish</a></li>
+                        </ul>
+                    </li>
+        
+                    <!-- Skills Hub Dropdown -->
+                    <li class="dropdown">
+                        <a href="skills-hub.html" class="dropbtn">Skills Hub</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="reading.html">Reading</a></li>
+                            <li><a href="writing.html">Writing</a></li>
+                            <li><a href="listening.html">Listening</a></li>
+                            <li><a href="speaking.html">Speaking</a></li>
+                        </ul>
+                    </li>
 
-            <!-- Levels Dropdown -->
-            <li class="dropdown">
-                <a href="curriculum.html" class="dropbtn">Curriculum</a>
-                <ul class="dropdown-menu">
-                    <li><a href="cfe-level.html">CfE Level 2-3</a></li>
-                    <li><a href="national4.html">National 4</a></li>
-                    <li><a href="national5.html">National 5</a></li>
-                    <li><a href="higher.html">Higher</a></li>
-                    <li><a href="advanced-higher.html">Advanced Higher</a></li>
+                    <!-- Levels Dropdown -->
+                    <li class="dropdown">
+                        <a href="curriculum.html" class="dropbtn">Curriculum</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cfe-level.html">CfE Level 2-3</a></li>
+                            <li><a href="national4.html">National 4</a></li>
+                            <li><a href="national5.html">National 5</a></li>
+                            <li><a href="higher.html">Higher</a></li>
+                            <li><a href="advanced-higher.html">Advanced Higher</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Topics Dropdown -->
+                    <li class="dropdown">
+                        <a href="topics.html" class="dropbtn">Topics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="society.html">Society</a></li>
+                            <li><a href="learning.html">Learning</a></li>
+                            <li><a href="employability.html">Employability</a></li>
+                            <li><a href="culture.html">Culture</a></li>
+                        </ul>
+                    </li>
+        
+                    <li><a href="clil.html">CLIL</a></li>
+                    <li><a href="blog.html">Blog Posts</a></li>
+                    <li><a href="forum.html">Teachers' Forum</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="useful-links.html">Useful Links</a></li>
+                    <li><a href="get-in-touch.html">Get in Touch</a></li>
                 </ul>
-            </li>
-            
-            <!-- Topics Dropdown -->
-            <li class="dropdown">
-                <a href="topics.html" class="dropbtn">Topics</a>
-                <ul class="dropdown-menu">
-                    <li><a href="society.html">Society</a></li>
-                    <li><a href="learning.html">Learning</a></li>
-                    <li><a href="employability.html">Employability</a></li>
-                    <li><a href="culture.html">Culture</a></li>
-                </ul>
-            </li>
-    
-            <li><a href="clil.html">CLIL</a></li>
-            <li><a href="blog.html">Blog Posts</a></li>
-            <li><a href="forum.html">Teachers' Forum</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="useful-links.html">Useful Links</a></li>
-            <li><a href="get-in-touch.html">Get in Touch</a></li>
-        </ul>
             </nav>
-            
         </header>
 
         <!-- Section 1: Welcome Message -->
@@ -96,46 +95,82 @@
             <div class="welcome-message">
 
                 <h2>Sign up to the MFL Resource Hub</h2>
-                <form action="/signup" method="POST">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" required>
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" required>
-                    <button type="submit">Sign Up</button>
+
+                <!-- Dropdown to select Teacher or Pupil -->
+                <form action="/signup" method="POST" id="signup-form">
+                    <label for="user-role">To ensure you get the best user experience possible, please select the option which best describes you:</label>
+                    <select id="user-role" name="user-role" onchange="showForm()">
+                        <option value="select">Select Option</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="pupil">Pupil</option>
+                    </select>
+
+                    <!-- Teacher Form (hidden by default) -->
+                    <div id="teacher-form" class="user-form" style="display: none;">
+                        <h3>Teacher Sign Up</h3>
+                        <label for="username"><b>Username:</b><br><i>Please note: the username you choose will be visible to other members when using the Teacher Forum.</i></label>
+                        <input type="text" name="username" required>
+                        
+                        <label for="email"><b>Email:</b></label>
+                        <input type="email" name="email" required>
+                        
+                        <label for="password"><b>Password:</b></label>
+                        <input type="password" name="password" required>
+                        
+                        <label for="school"><b>School Name <i>(optional)</i>:</b></label>
+                        <input type="text" name="school">
+                        
+                        <button type="submit"><b>Submit</b></button>
+                    </div>
+
+                    <!-- Pupil Form (hidden by default) -->
+                    <div id="pupil-form" class="user-form" style="display: none;">
+                        <h3>Pupil Sign Up</h3>
+                        <label for="username"><b>Username:</b></label>
+                        <input type="text" name="username" required>
+                        
+                        <label for="email"><b>Email:</b></label>
+                        <input type="email" name="email" required>
+                        
+                        <label for="password"><b>Password:</b></label>
+                        <input type="password" name="password" required>
+                        
+                        <button type="submit">Submit</button>
+                    </div>
                 </form>
             
             </div>
 
         </section>
 
-    <div id="cookie-banner" class="cookie-banner">
-        <p>
-          We use cookies to improve your experience. By clicking "Accept All", you agree to our use of cookies.
-          <a href="legal/privacy.html" target="_blank">Learn more</a>
-        </p>
-        <div class="cookie-buttons">
-          <button id="accept-cookies">Accept All</button>
-          <button id="reject-cookies">Reject</button>
+        <div id="cookie-banner" class="cookie-banner">
+            <p>
+              We use cookies to improve your experience. By clicking "Accept All", you agree to our use of cookies.
+              <a href="legal/privacy.html" target="_blank">Learn more</a>
+            </p>
+            <div class="cookie-buttons">
+              <button id="accept-cookies">Accept All</button>
+              <button id="reject-cookies">Reject</button>
+            </div>
         </div>
-      </div>
 
-    <script src="js/homepage-popup.js"></script>
-    <script src="js/cookie-banner.js"></script>
-    <script src="js/signup.js"></script>
+        <script src="js/homepage-popup.js"></script>
+        <script src="js/cookie-banner.js"></script>
+        <script src="js/signup.js"></script>
 
-</body>
+    </body>
 
-<footer>
-    <section class="footer">
-    <div class="footer">
-        <p>DISCLAIMER: All images on this page are authored by Freepik. Downloaded from <a href="https://www.flaticon.com/authors/freepik" title="freepik-main-page">Icons created by Freepik - Flaticon</a></p>
-        <p>This website is developed and managed by Heather McKirdy.</p>
-        <p>&copy; 2025 MFL Resource Hub. All Rights Reserved.</p>
-            <a href="get-in-touch.html" class="my-button-link">
-                <button class="my-button">Get in Touch</button>
-            </a>
-    </div>
-    </section>
-</footer>
+    <footer>
+        <section class="footer">
+        <div class="footer">
+            <p>DISCLAIMER: All images on this page are authored by Freepik. Downloaded from <a href="https://www.flaticon.com/authors/freepik" title="freepik-main-page">Icons created by Freepik - Flaticon</a></p>
+            <p>This website is developed and managed by Heather McKirdy.</p>
+            <p>&copy; 2025 MFL Resource Hub. All Rights Reserved.</p>
+                <a href="get-in-touch.html" class="my-button-link">
+                    <button class="my-button">Get in Touch</button>
+                </a>
+        </div>
+        </section>
+    </footer>
 
 </html>
